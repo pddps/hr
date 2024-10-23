@@ -1,0 +1,37 @@
+{
+  "name": "venoda-service-website",
+  "version": "1.0.0",
+  "description": "Venoda Service Pvt Ltd Hiring Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.12",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-validator": "^7.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2",
+    "node-sass": "^9.0.0",
+    "react-moment": "^1.1.3",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.2.1",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^3.1.0",
+    "sass-loader": "^16.0.2",
+    "web-vitals": "^4.2.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "nodemon": "^3.1.7"
+  }
+}
